@@ -1,0 +1,41 @@
+{
+  "title": "AIRSPA AI Five-Constant",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect AI Five-Constant System",
+        "description": "Enter the device DID and WebSocket server address separately. The integration appends the DID automatically. Login uses only the AppID and DID.",
+        "data": {
+          "appid": "AppID",
+          "device_id": "Device DID",
+          "server_url": "WebSocket server address (leave blank for default)"
+        }
+      }
+    },
+    "error": {
+      "required": "This field is required",
+      "invalid_ws_url": "Enter a valid server address beginning with ws:// or wss://"
+    },
+    "abort": {
+      "already_configured": "This device is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Update cloud connection",
+        "description": "Current device DID: {device_id}. The DID is fixed; update the server address or credentials only.",
+        "data": {
+          "appid": "AppID",
+          "device_id": "Device DID (read-only)",
+          "server_url": "WebSocket server address (leave blank for default)"
+        }
+      }
+    },
+    "error": {
+      "required": "This field is required",
+      "invalid_ws_url": "Enter a valid server address beginning with ws:// or wss://",
+      "device_id_read_only": "The DID cannot be changed here; remove and re-add the device to replace it"
+    }
+  }
+}

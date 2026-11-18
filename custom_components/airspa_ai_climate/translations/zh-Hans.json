@@ -1,0 +1,41 @@
+{
+  "title": "艾尔斯派 AI 五恒",
+  "config": {
+    "step": {
+      "user": {
+        "title": "连接 AI 五恒系统",
+        "description": "分别填写设备 DID 和 WebSocket 服务地址，系统会自动在地址末尾拼接 DID。登录使用 AppID 与 DID，无需其他凭据。",
+        "data": {
+          "appid": "AppID",
+          "device_id": "设备 DID",
+          "server_url": "WebSocket 服务地址（留空使用官方地址）"
+        }
+      }
+    },
+    "error": {
+      "required": "此项不能为空",
+      "invalid_ws_url": "地址无效，请填写以 ws:// 或 wss:// 开头的服务器地址"
+    },
+    "abort": {
+      "already_configured": "该设备已经配置"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "更新云端连接",
+        "description": "当前设备 DID：{device_id}。DID 固定不变；修改服务地址或凭据后，集成会自动重新加载。",
+        "data": {
+          "appid": "AppID",
+          "device_id": "设备 DID（不支持修改）",
+          "server_url": "WebSocket 服务地址（留空使用官方地址）"
+        }
+      }
+    },
+    "error": {
+      "required": "此项不能为空",
+      "invalid_ws_url": "地址无效，请填写以 ws:// 或 wss:// 开头的服务器地址",
+      "device_id_read_only": "DID 不支持在更新页修改；如需更换设备，请删除后重新添加"
+    }
+  }
+}

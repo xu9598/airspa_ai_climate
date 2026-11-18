@@ -1,0 +1,12 @@
+{
+  "domain": "airspa_ai_climate",
+  "name": "艾尔斯派 AI 五恒",
+  "version": "1.3.8",
+  "config_flow": true,
+  "dependencies": [],
+  "codeowners": [],
+  "iot_class": "cloud_push",
+  "requirements": [
+    "websockets>=12.0"
+  ]
+}
